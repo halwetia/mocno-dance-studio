@@ -126,16 +126,27 @@
     <script>
         const hamburger = document.getElementById('hamburger');
         const menu = document.getElementById('menu');
+
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('aktywny');
-            menu.classList.toggle('otwarte');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+                menu.style.flexDirection = 'column';
+            }
         });
+
         document.querySelectorAll('#menu a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('aktywny');
-                menu.classList.remove('otwarte');
+                menu.style.display = 'none';
             });
         });
+
+        if (window.innerWidth <= 768) {
+            menu.style.display = 'none';
+        }
 
         document.querySelectorAll('.accordion-btn').forEach(btn => {
             btn.addEventListener('click', () => {
