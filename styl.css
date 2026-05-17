@@ -1,0 +1,687 @@
+/* CZCIONKA BEBAS NEUE */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: radial-gradient(ellipse at top left, #8B1a30 0%, #6B1728 40%, #3d0d18 100%);
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+/* NAWIGACJA */
+nav {
+    background-color: #4a0f1a;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: #f0a0b0;
+}
+
+/* HERO */
+#hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(107,23,40,0.8)), url('zdjecia/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 140px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    border: 60px solid rgba(255,255,255,0.04);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    border: 60px solid rgba(255,255,255,0.03);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 100px;
+    letter-spacing: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+#hero p {
+    font-size: 20px;
+    margin: 20px 0 40px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    font-weight: 300;
+}
+
+#hero a {
+    background-color: transparent;
+    color: white;
+    padding: 15px 50px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    border: 2px solid white;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+#hero a:hover {
+    background-color: white;
+    color: #6B1728;
+}
+
+/* SEKCJE PODSTRON */
+.podstrona {
+    padding: 80px 10%;
+    min-height: 80vh;
+}
+
+.podstrona h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    letter-spacing: 6px;
+    text-align: center;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.podstrona h2::before {
+    content: '◗◗';
+    font-size: 36px;
+    letter-spacing: -8px;
+    flex-shrink: 0;
+}
+
+.podstrona h2::after {
+    content: '◖◖';
+    font-size: 36px;
+    letter-spacing: -8px;
+    flex-shrink: 0;
+}
+
+/* KARTY */
+.karty {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.karta {
+    background-color: #4a0f1a;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.karta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.karta h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.karta p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.8);
+}
+
+.cena {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px !important;
+    color: white !important;
+    margin: 10px 0 !important;
+}
+
+/* GALERIA */
+.galeria-siatka {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.galeria-siatka img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* KONTAKT */
+.kontakt-info {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 2.5;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.mapa {
+    width: 100%;
+}
+
+/* FORMULARZ */
+.formularz-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* ZAJĘCIA - ACCORDION */
+.zajecia-grupa {
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.grupa-tytul {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+}
+
+.accordion-item {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.accordion-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-align: left;
+    padding: 20px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.accordion-btn:hover {
+    color: rgba(255,255,255,0.6);
+}
+
+.accordion-btn span {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.accordion-tresc {
+    display: none;
+    padding: 20px 0 30px;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.accordion-tresc img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.accordion-tresc p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.accordion-item.aktywny .accordion-tresc {
+    display: flex;
+}
+
+/* GRAFIK - SIATKA */
+.grafik-siatka {
+    width: 100%;
+    overflow-x: auto;
+    min-width: 0;
+}
+
+.grafik-naglowki {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.grafik-dzien-naglowek {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 12px;
+    background-color: #4a0f1a;
+}
+
+.grafik-kolumny {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    gap: 8px;
+    align-items: start;
+}
+
+.grafik-kolumna {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grafik-karta {
+    padding: 12px;
+    background-color: #4a0f1a;
+}
+
+.grafik-dzieci {
+    border-left: 4px solid #ff6b9d;
+}
+
+.grafik-dorosli {
+    border-left: 4px solid #4fc3f7;
+}
+
+.grafik-karta-godzina {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 4px;
+}
+
+.grafik-karta-nazwa {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.grafik-karta-grupa {
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+}
+
+/* LEGENDA */
+.grafik-legenda {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.legenda-kolor {
+    width: 20px;
+    height: 4px;
+}
+
+/* RESPONSYWNOŚĆ MOBILNA */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 5px;
+    }
+
+    #hero h1 {
+        font-size: 60px;
+    }
+
+    .karty {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeria-siatka {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .podstrona {
+        padding: 60px 5%;
+    }
+
+    .grafik-naglowki,
+    .grafik-kolumny {
+        grid-template-columns: repeat(5, 180px);
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 42px;
+    }
+
+    .galeria-siatka {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* O NAS */
+.o-nas-tekst {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.85);
+}
+
+.zalozycielka {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.zalozycielka img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.zalozycielka-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.zalozycielka-tytul {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ff6b9d;
+    margin-bottom: 20px !important;
+}
+
+.zalozycielka-info p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.85);
+}
+
+@media (max-width: 768px) {
+    .zalozycielka {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* STRONA GŁÓWNA - CZYM JESTEŚMY */
+.home-czym {
+    padding: 100px 10%;
+    background-color: #4a0f1a;
+}
+
+.home-czym-tresc {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-czym h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-czym h2::before {
+    content: '◗◗';
+    font-size: 28px;
+    letter-spacing: -8px;
+}
+
+.home-czym h2::after {
+    content: '◖◖';
+    font-size: 28px;
+    letter-spacing: -8px;
+}
+
+.home-czym p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 40px;
+}
+
+.home-btn {
+    display: inline-block;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding: 12px 40px;
+    transition: all 0.3s;
+}
+
+.home-btn:hover {
+    background-color: white;
+    color: #4a0f1a;
+}
+
+/* KADRA W O NAS */
+.kadra-sekcja {
+    margin-top: 80px;
+}
+
+.kadra-tytul {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: rgba(255,255,255,0.7);
+}
+
+/* GALERIA - SEKCJE */
+.galeria-sekcja {
+    margin-bottom: 80px;
+}
+
+.galeria-tytul {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.7);
+}
+
+/* WYDARZENIA */
+.wydarzenia-lista {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.wydarzenie {
+    display: flex;
+    gap: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    align-items: flex-start;
+}
+
+.wydarzenie-data {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #ff6b9d;
+    min-width: 110px;
+    padding-top: 4px;
+}
+
+.wydarzenie-tresc h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.wydarzenie-tresc p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.8);
+}
+
+.wyroznienie .wydarzenie-data {
+    font-size: 28px;
+}
+
+/* LOGO IMITACJA */
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-strzalka {
+    font-size: 20px;
+    color: #ff6b9d;
+}
+
+/* NAWIGACJA Z LOGO */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4a0f1a;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* NAKŁADKA NA PODSTRONACH */
+.podstrona-hero {
+    background: linear-gradient(to bottom, #2d0a12 0%, #8B1a30 50%, #6B1728 100%);
+    padding: 80px 10%;
+    text-align: center;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.podstrona-hero h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    letter-spacing: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+}
+
+.podstrona-hero h2::before {
+    content: '◗◗';
+    font-size: 36px;
+    letter-spacing: -8px;
+}
+
+.podstrona-hero h2::after {
+    content: '◖◖';
+    font-size: 36px;
+    letter-spacing: -8px;
+}
+
+.podstrona-tresc {
+    padding: 60px 10%;
+    min-height: 60vh;
+}
