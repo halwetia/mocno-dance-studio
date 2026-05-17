@@ -32,6 +32,8 @@ nav ul {
     display: flex;
     gap: 30px;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
@@ -49,18 +51,19 @@ nav a:hover {
 /* LOGO */
 .logo {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px;
-    letter-spacing: 4px;
+    font-size: 22px;
+    letter-spacing: 3px;
     color: white;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .logo-strzalka {
-    font-size: 20px;
+    font-size: 16px;
     color: #ff6b9d;
 }
 
@@ -73,6 +76,7 @@ nav a:hover {
     background: none;
     border: none;
     padding: 5px;
+    flex-shrink: 0;
 }
 
 .hamburger span {
@@ -98,8 +102,18 @@ nav a:hover {
 /* RESPONSYWNOŚĆ MOBILNA */
 @media (max-width: 768px) {
     nav {
-        padding: 15px 20px;
-        flex-wrap: wrap;
+        padding: 12px 16px;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .logo-strzalka {
+        font-size: 12px;
     }
 
     .hamburger {
@@ -108,29 +122,37 @@ nav a:hover {
 
     nav ul {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #4a0f1a;
         flex-direction: column;
         width: 100%;
         gap: 0;
-        margin-top: 15px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
     }
 
     nav ul.otwarte {
         display: flex;
-        max-height: 500px;
+    }
+
+    nav ul li {
+        width: 100%;
     }
 
     nav ul li a {
         display: block;
-        padding: 12px 0;
+        padding: 15px 20px;
         border-bottom: 1px solid rgba(255,255,255,0.1);
-        font-size: 20px;
+        font-size: 18px;
+        width: 100%;
     }
 
     #hero h1 {
-        font-size: 60px;
+        font-size: 50px;
     }
 
     .karty {
@@ -142,13 +164,38 @@ nav a:hover {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .podstrona {
-        padding: 60px 5%;
+    .podstrona-tresc {
+        padding: 40px 5%;
+    }
+
+    .podstrona-hero {
+        padding: 50px 5%;
     }
 
     .grafik-naglowki,
     .grafik-kolumny {
         grid-template-columns: repeat(5, 180px);
+    }
+
+    .zalozycielka {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 36px;
+    }
+
+    .logo {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .galeria-siatka {
+        grid-template-columns: 1fr;
     }
 }
 
