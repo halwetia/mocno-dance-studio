@@ -17,6 +17,9 @@ body {
 
 /* NAWIGACJA */
 nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #4a0f1a;
     padding: 15px 40px;
     position: sticky;
@@ -41,6 +44,86 @@ nav a {
 
 nav a:hover {
     color: #f0a0b0;
+}
+
+/* LOGO */
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.logo-strzalka {
+    font-size: 20px;
+    color: #ff6b9d;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.hamburger.aktywny span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.aktywny span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.aktywny span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* RESPONSYWNOŚĆ MOBILNA */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        margin-top: 15px;
+    }
+
+    nav ul.otwarte {
+        display: flex;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        font-size: 20px;
+    }
 }
 
 /* HERO */
