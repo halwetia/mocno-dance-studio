@@ -130,6 +130,12 @@
             hamburger.classList.toggle('aktywny');
             menu.classList.toggle('otwarte');
         });
+        document.querySelectorAll('#menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('aktywny');
+                menu.classList.remove('otwarte');
+            });
+        });
 
         document.querySelectorAll('.accordion-btn').forEach(btn => {
             btn.addEventListener('click', () => {
